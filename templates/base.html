@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticketing System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="hi">
+            <img src="/static/images/train.png" alt="">
+            <h1>RailRoute</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('search_trains') }}">Search Trains</a></li>
+                <li><a href="{{ url_for('view_tickets') }}">View Tickets</a></li>
+                <li><a href="{{ url_for('cancel_ticket') }}">Cancel Ticket</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 RailRoute LTD </p>
+    </footer>
+</body>
+</html>
